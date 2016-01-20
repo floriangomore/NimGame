@@ -1,4 +1,0 @@
-#include	<map>
-#include	"nimgame.h"
-
-void		display(std::map<std::string, std::strin
