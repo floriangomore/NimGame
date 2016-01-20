@@ -1,0 +1,18 @@
+#ifndef PLAYER_H_
+# define PLAYER_H_
+
+#include		<string>
+
+class			Player
+{
+ private:
+  std::string		m_nom;
+ public:
+  Player();
+  ~Player();
+
+  const std::string&	getNom(void) const { return (m_nom); }
+  bool			play();
+};
+
+#endif // PLAYER_H_

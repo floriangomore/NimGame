@@ -1,0 +1,17 @@
+#include		<iostream>
+#include		"Player.h"
+
+Player::Player()
+{
+  std::cout << "Entrez le nom du joueur: " << std::endl;
+  std::cin >> m_nom;
+}
+
+Player::~Player()
+{}
+
+bool			Player::play()
+{
+  // recup saisie utilisateur
+  return (true);
+}
