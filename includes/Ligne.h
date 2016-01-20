@@ -16,6 +16,8 @@ class		Ligne
 
   int		getNbStick();
   void		setNbStick(int nbStick);
+  int		getId();
+  void		setId(int id);
 };
 
 #endif // LIGNE_H_
