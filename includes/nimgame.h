@@ -5,4 +5,7 @@
 #include "Plateau.h"
 #include "Ligne.h"
 
+#include <iostream>
+#include <string>
+
 #endif // NIMGAME_H_
