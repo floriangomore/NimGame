@@ -12,7 +12,7 @@ Plateau::~Plateau()
   std::cout << "Plateau supprimé avec succès" << std::endl;
 }
 
-void		Plateau::Initialisation(void)
+void		Plateau::initialisation(void)
 {
   int	i = 1;
   int	nb = 1;

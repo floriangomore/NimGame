@@ -1,13 +1,15 @@
 #include	"nimgame.h"
 
 int		launchGame(void)
-{
-  int nbStick = 16;
-  Plateau(nbStick);
-
-  Plateau.initialisation();
-
-  Ligne
+{ 
+  Plateau	*ptr;
+  int		nbStick = 16;
   
+  ptr = new Plateau(nbStick);
+
+  ptr->initialisation();
+
+  delete ptr;
+
   return (0);
 }
