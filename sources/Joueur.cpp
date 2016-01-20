@@ -1,2 +1,1 @@
-#include <iostream>
-#include "joueur.h"
+#include	"nimgame.h"

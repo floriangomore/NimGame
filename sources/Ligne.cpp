@@ -1,8 +1,4 @@
-/*Ligne.cpp*/
-
-#include	<iostream>
-#include	<string>
-#include	"Ligne.h"
+#include	"nimgame.h"
 
 Ligne::Ligne(int id, int nbstick)
 {
@@ -17,12 +13,12 @@ Ligne::~Ligne()
   std::cout << "les lignes du jeu ont été supprimées !" << std::endl;
 }
 
-void		Ligne::clear(void)
+voidLigne::clear(void)
 {
   return(0);
 }
 
-void		Ligne::addstick(int stkajout)
+voidLigne::addstick(int stkajout)
 {
-  
+
 }
