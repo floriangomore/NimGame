@@ -1,6 +1,6 @@
 #include	<iostream>
 #include	<string>
-#include"Plateau.h"
+#include	"Plateau.h"
 
 Plateau::Plateau(int totalstick, int joueur)
 {
@@ -15,4 +15,18 @@ Plateau::~Plateau()
   std::cout << "le plateau est vide, la partie est terminée !" << std::endl;
 }
 
-Plateau&       Plateau::set
+Plateau		Plateau::settotal(int totalstick)
+{
+  return(0);
+}
+
+void		Plateau::Initialisation()
+{
+  return(0);
+}
+
+void		Plateau::timer()
+{
+  return(0);
+}
+
