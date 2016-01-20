@@ -1,29 +1,21 @@
 #ifndef JOUEUR_H_
-#define JOUEUR_H_
+# define JOUEUR_H_
 
 #include "nimgame.h"
 
-class Joueur
+class		Joueur
 {
-private:
-	std::string m_nom;
-	std::string type;
-	int m_score;	
-	Joueur(void);
+ private:
+  std::string	j_nom;
+  Joueur(void);
 
  public:
-	Joueur(const std::string &nom,const std::string &type, int score);
-	~Joueur();
+  Joueur(const std::string &nom);
+  Joueur(const Joueur &copy);
+  ~Joueur();
 
-	//Méthode à inclure pour IA
-	
-	std::string		getNom(void);
-	std::string		getType(void);
-	int				getScore(void);
-	
-	void			setType(const std::string &type, int n);
-	void 			setNom(const std::string &nom, int n);
-	void			setScore(void);    //A voir comment récupérer les points marqués par joueur et enregistrer dans l'ob. plateau
+  std::string	getNom();
+  void		setNom(const std::string& nom);
 };
 
 #endif // JOUEUR_H_

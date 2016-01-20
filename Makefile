@@ -13,6 +13,7 @@ RM	=	rm -rf
 CFLAGS	=	-Wall -Werror -Wextra -I./includes/
 
 SRC	=	./sources/main.cpp			\
+		./sources/launchgame.cpp		\
 		./sources/Joueur.cpp			\
 		./sources/Ligne.cpp			\
 		./sources/Plateau.cpp

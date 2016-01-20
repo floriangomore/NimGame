@@ -1,24 +1,31 @@
 #include	"nimgame.h"
 
-Ligne::Ligne(int id, int nbstick)
+Ligne::Ligne(int id, int nbStick)
 {
   l_id = id;
-  l_nbstick = nbstick;
+  l_nbStick = nbStick;
 
-  std::cout << "les lignes du jeu ont été initialisées !" << std::endl;
+  std::cout << "Ligne créée" << std::endl;
+}
+
+Ligne::Ligne(const Ligne &copy)
+{
+  *this = copy;
+  
+  std::cout << "Ligne créée" << std::endl;
 }
 
 Ligne::~Ligne()
 {
-  std::cout << "les lignes du jeu ont été supprimées !" << std::endl;
+  std::cout << "Ligne supprimée" << std::endl;
 }
 
-voidLigne::clear(void)
+int		Ligne::getNbStick(void)
 {
-  return(0);
+  return (l_nbStick);
 }
 
-voidLigne::addstick(int stkajout)
+void		Ligne::setNbStick(int nbStick)
 {
-
+  l_nbStick = nbStick;
 }

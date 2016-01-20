@@ -1,29 +1,36 @@
 #include	"nimgame.h"
 
-Plateau::Plateau(int totalstick, int joueur)
+Plateau::Plateau(int nbTotalStick)
 {
-  p_totalstick = totalstick;
-  p_joueur = joueur;
+  p_nbTotalStick = nbTotalStick;
 
-  std::cout << "le plateau a été crée !" << std::endl;
+  std::cout << "Plateau prêt à jouer" << std::endl;
 }
 
 Plateau::~Plateau()
 {
-  std::cout << "le plateau est vide, la partie est terminée !" << std::endl;
+  std::cout << "Plateau supprimé avec succès" << std::endl;
 }
 
-Plateau		Plateau::settotal(int totalstick)
+void		Plateau::initialisation(void)
 {
-  return(0);
+  int	i = 1;
+  int	nb = 1;
+  
+  while (i++ <= 4)
+    {
+      new Ligne(i, nb);
+      nb += 2;
+    }
+  std::cout << "Plateau initialisé" << std::endl;
 }
 
-void		Plateau::Initialisation()
+int		Plateau::getNbTotalStick(void)
 {
-  return(0);
+  return (p_nbTotalStick);
 }
 
-void		Plateau::timer()
+void		Plateau::setNbTotalStick(int nbTotalStick)
 {
-  return(0);
+  p_nbTotalStick = nbTotalStick;
 }

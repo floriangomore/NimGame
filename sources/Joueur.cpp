@@ -1,55 +1,29 @@
 #include	"nimgame.h"
 
-using namespace std;
-
-
-void	Joueur::setType(const string& type,int n)
+Joueur::Joueur(const std::string &nom)
 {
+  j_nom = nom;
 
-	n = 0;
- 	
-
-	cout<<"Humain ou Ordinateur?(0/1):"<<endl;
-	cin >> n;
-	if(n = 0)
-	{
-	
-	}
-	if(n = 1)
-	{
-		
-	}
-	else
-	{
-		cout<<"Erreur de saisie."<<endl;
-	}
-	m_type = type;
-
+  std::cout << "Joueur créé" << std::endl;
 }
 
-/*void	Joueur::setNom(const string& nom, int n)
+Joueur::Joueur(const Joueur &copy)
 {
-	 n = 0;
-	string nom;
-
-	cout<<"Selectionnez votre joueur(0/1):"<<endl;
-	cin >> n;
-	if(n = 0)
-	{
-		cin >> "player 1";
-	}
-	if(n = 1)
-	{
-		cin >> "player 2";
-	}
-	else
-	{
-		cout<<"Erreur de saisie."<<endl;
-	}
-
-	m_nom = nom;
+  *this = copy;
+  std::cout << "Nouveau joueur créé" << std::endl;
 }
-void		Joueur::setScore(void)
+
+Joueur::~Joueur()
 {
-	Joueur.getNom(Plateau.getScore());
-}*/
+  std::cout << "Joueur supprimé" << std::endl;
+}
+
+std::string	Joueur::getNom(void)
+{
+  return (j_nom);
+}
+
+void		Joueur::setNom(const std::string& nom)
+{
+  j_nom = nom;
+}

@@ -1,26 +1,20 @@
-/* Plateau.h */
-
 #ifndef PLATEAU_H_
-#define PLATEAU_H_
+# define PLATEAU_H_
 
-#include	<string>
-#include	<iostream>
+#include "nimgame.h"
 
-class Plateau
+class		Plateau
 {
  private:
-  int		p_totalstick;
+  int		p_nbTotalStick;
 
  public:
-  Plateau(int totalstick);
+  Plateau(int nbTotalStick);
   ~Plateau();
 
-  int		gettotal(void)/*const*/ {return (p_totalstick)};
-
-  /*const*/void	settotal(int totalstick);
+  int		getNbTotalStick();
+  void		setNbTotalStick(int nbTotalStick);
   void		initialisation();
-  //void	timer()
-}
+};
 
-#endif	 // PLATEAU_H_
-    
+#endif // PLATEAU_H_

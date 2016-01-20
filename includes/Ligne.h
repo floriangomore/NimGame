@@ -1,23 +1,21 @@
-/* Ligne.h */
-
 #ifndef LIGNE_H_
-#define LIGNE_H_
+# define LIGNE_H_
 
-#include	<string>
-#include	<iostream>
+#include "nimgame.h"
 
-class Ligne
+class		Ligne
 {
  private:
   int		l_id;
-  int		l_nbstick;
+  int		l_nbStick;
 
  public:
-  Ligne(const int id, int nbstick);
+  Ligne(int id, int nbStick);
+  Ligne(const Ligne &copy);
   ~Ligne();
 
-  void		Clear(void);
-  void		addstick(int stkajout);
+  int		getNbStick();
+  void		setNbStick(int nbStick);
 };
 
 #endif // LIGNE_H_
