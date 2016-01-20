@@ -8,7 +8,7 @@ class		Ligne
  private:
   int		l_id;
   int		l_nbStick;
-
+  
  public:
   Ligne(int id, int nbStick);
   Ligne(const Ligne &copy);

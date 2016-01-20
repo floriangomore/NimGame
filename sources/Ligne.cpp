@@ -1,4 +1,5 @@
 #include	"nimgame.h"
+#include	"Ligne.h"
 
 Ligne::Ligne(int id, int nbStick)
 {

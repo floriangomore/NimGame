@@ -1,4 +1,5 @@
 #include	"nimgame.h"
+#include	"Joueur.h"
 
 Joueur::Joueur(const std::string &nom)
 {
