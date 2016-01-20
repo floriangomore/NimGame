@@ -17,6 +17,8 @@ Plateau::~Plateau()
   delete p_ligne2;
   delete p_ligne3;
   delete p_ligne4;
+
+  std::cout << "Lignes supprimées avec succès" << std::endl;
   
   std::cout << "Plateau supprimé avec succès" << std::endl;
 }
