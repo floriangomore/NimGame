@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-#include <iostream>
-#include "Joueur.h"
-//#include "plateau.h"
+#include	"nimgame.h"
 
 using namespace std;
 
@@ -56,6 +53,3 @@ void		Joueur::setScore(void)
 {
 	Joueur.getNom(Plateau.getScore());
 }*/
-=======
-#include	"nimgame.h"
->>>>>>> 645b0230467e6a6b9cb8b27eda7e5e8e9d907b0b

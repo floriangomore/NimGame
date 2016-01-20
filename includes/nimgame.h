@@ -7,6 +7,5 @@
 
 #include <iostream>
 #include <string>
-#include <ostream>
 
 #endif // NIMGAME_H_
