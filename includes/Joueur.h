@@ -1,6 +1,7 @@
-#ifndef "JOUEUR_H_"
-#define "JOUEUR_H_"
-#include <string>
+#ifndef JOUEUR_H_
+#define JOUEUR_H_
+
+#include "nimgame.h"
 
 class joueur;
 {
