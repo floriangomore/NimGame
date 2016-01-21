@@ -29,3 +29,13 @@ void		Ligne::setNbStick(int nbStick)
 {
   l_nbStick = nbStick;
 }
+
+int		Ligne::getId(void)
+{
+  return (l_id);
+}
+
+void		Ligne::setId(int id)
+{
+  l_id = id;
+}

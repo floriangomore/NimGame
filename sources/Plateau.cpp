@@ -12,7 +12,7 @@ Plateau::~Plateau()
   std::cout << "Plateau supprimé avec succès" << std::endl;
 }
 
-void		Plateau::initialisation(void)
+void		Plateau::Initialisation(void)
 {
   int	i = 1;
   int	nb = 1;
@@ -34,3 +34,4 @@ void		Plateau::setNbTotalStick(int nbTotalStick)
 {
   p_nbTotalStick = nbTotalStick;
 }
+
