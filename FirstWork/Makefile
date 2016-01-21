@@ -16,7 +16,9 @@ OBJ	=	$(SRC:.cpp=.o)
 
 OUTPUT	=	NimGame # nom du programme
 
-all:		$(OBJ)
+all:		$(OUTPUT)
+
+$(OUTPUT):	$(OBJ)
 		$(CXX) $(LDFLAGS) -o $(OUTPUT) $^
 		rm -rf ./sources/*.o
 
