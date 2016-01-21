@@ -18,6 +18,7 @@ OUTPUT	=	NimGame # nom du programme
 
 all:		$(OBJ)
 		$(CXX) $(LDFLAGS) -o $(OUTPUT) $^
+		rm -rf ./sources/*.o
 
 $(OBJ):		%.o: %.cpp
 		$(CXX) $(CFLAGS) -c $< -o $@
