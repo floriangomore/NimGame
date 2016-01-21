@@ -10,11 +10,7 @@ LDFLAGS	=	#options de link (librairies)
 
 OBJ     =       $(SRC:.cpp=.o)
 
-SRC     =       ./sources/main.cpp                      \
-                ./sources/launchgame.cpp                \
-                ./sources/Joueur.cpp                    \
-                ./sources/Ligne.cpp                     \
-                ./sources/Plateau.cpp
+SRC     =       $(wildcard ./sources/*.cpp)
 
 OBJ	=	$(SRC:.cpp=.o)
 
@@ -23,9 +19,10 @@ OUTPUT	=	NimGame # nom du programme
 all:		$(OBJ)
 		$(CXX) $(LDFLAGS) -o $(OUTPUT) $^
 
-$(OBJ):		%.o: %.cpp clean
+$(OBJ):		%.o: %.cpp
 		$(CXX) $(CFLAGS) -c $< -o $@
 
+re:		fclean all
 
 .PHONY:		clean fclean
 
