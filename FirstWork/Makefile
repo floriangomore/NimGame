@@ -4,35 +4,33 @@
 #                #
 ##################
 
-NAME	=	NimGame
+CXX	=	g++ # compilateur
+CFLAGS	=	-Wall -Werror -Wextra -I./includes/ #options de compilation (debug par exemple)
+LDFLAGS	=	#options de link (librairies)
 
-CC	=	g++
+OBJ     =       $(SRC:.cpp=.o)
 
-RM	=	rm -rf
+SRC     =       ./sources/main.cpp                      \
+                ./sources/launchgame.cpp                \
+                ./sources/Joueur.cpp                    \
+                ./sources/Ligne.cpp                     \
+                ./sources/Plateau.cpp
 
-CFLAGS	=	-Wall -Werror -Wextra -I./includes/
+OBJ	=	$(SRC:.cpp=.o)
 
-SRC	=	./sources/main.cpp			\
-		./sources/launchgame.cpp		\
-		./sources/Joueur.cpp			\
-		./sources/Ligne.cpp			\
-		./sources/Plateau.cpp
+OUTPUT	=	NimGame # nom du programme
 
-all:		$(NAME)
+all:		$(OBJ)
+		$(CXX) $(LDFLAGS) -o $(OUTPUT) $^
 
-$(NAME):
-		$(CC) $(SRC) -o $(NAME) $(CFLAGS)
-		@echo "Compilation terminée"
-
-fclean	:	tild
-		$(RM) $(NAME)
-		@echo "Suppression de l'exécutable terminée"
-
-re	:	fclean all
-
-tild	:
-		find . -name "*~" -print -delete
-		@echo "Fichiers supprimés"
+$(OBJ):		%.o: %.cpp clean
+		$(CXX) $(CFLAGS) -c $< -o $@
 
 
-.PHONY:		all fclean
+.PHONY:		clean fclean
+
+clean:
+		rm -rf ./sources/*.o
+
+fclean:		clean
+		rm -rf $(OUTPUT)
